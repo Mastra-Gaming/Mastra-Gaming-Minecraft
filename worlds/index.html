@@ -10,6 +10,12 @@
 </head>
 <body>
 <h2 id="picker-title">Select Server</h2>
+
+  <div style="margin: 20px;">
+  <label for="gui-scale">GUI Scale: </label>
+  <input type="range" id="gui-scale" name="gui-scale" min="1" max="2" step="0.1" value="1" oninput="scaleGUI(this.value)">
+</div>
+
 <section id="picker-menu">
   <!-- Server 1 -->
   <div id="picker-menu-1" class="server-entry">
@@ -112,6 +118,20 @@
   </div>
 </section>
 
+<section class="picker-button-wrapper picker-buttons"><a href="../loading">
+  <div class="button picker-button1 grid-button1"><span>Play Selected World</span></div>
+  </a> <a href="../loading">
+  <div class="button picker-button1 grid-button2"><span>Create New World</span></div>
+  </a> <a href="https://flo8998.github.io/HTML-Minecraft/docs/">
+  <div class="button picker-button2 grid-button3" disabled><span>Rename</span></div>
+  </a> <a href="https://flo8998.github.io/HTML-Minecraft/docs/">
+  <div class="button picker-button2 grid-button4" disabled><span>Delete</span></div>
+  </a> <a href="https://flo8998github.io/HTML-Minecraft/docs/">
+  <div class="button picker-button2 grid-button5"><span>Re-Create</span></div>
+  </a> <a href="../">
+  <div class="button picker-button2 grid-button6"><span>Cancel</span></div>
+  </a></section>
+
 <script>
 const servers = [
     { ip: "mc.mastra-gaming.de", port: 25565, playersElement: "players-server1", connectionElement: "connection-server1", nameElement: "server-name-1", motdElement: "server-motd-1", iconElement: "server-icon-1", entryElement: "picker-menu-1" },
@@ -199,129 +219,18 @@ const servers = [
             }
             document.getElementById(server.entryElement).style.display = "none";
         }
+    function scaleGUI(scale) {
+    // Skalieren des Picker-Menüs
+    document.getElementById('picker-menu').style.transform = `scale(${scale})`;
+
+    // Optionale Anpassung: Das Picker-Menü zentriert halten
+    document.getElementById('picker-menu').style.transformOrigin = 'top center';
+  }
 
         // Serverstatus für alle Server abrufen
         servers.forEach(server => fetchServerStatus(server));
     </script>
 
-
-<style>
-/* Sicherstellen, dass der Server-Informationsbereich nicht vom unteren Teil verdeckt wird */
-#picker-menu {
-  max-height: calc(100vh - 300px); /* Dynamische Höhe, die den Button-Bereich respektiert */
-  overflow-y: auto;
-  margin-bottom: 20px; /* Abstand zu den Buttons */
-}
-
-/* Generelle Struktur für die Servereinträge */
-.server-entry {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  border: 1px solid #555;
-  border-radius: 5px;
-  display: flex;
-  position: relative;
-  margin-bottom: 10px;
-  width: 600px;
-  height: 80px;
-  color: white;
-  font-family: "Minecraft", monospace;
-}
-
-/* Server-Icon */
-.server-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 10px;
-  margin-right: 10px;
-}
-
-/* Falls das Icon nicht gefunden wird, Fallback zu default-icon.png */
-.server-icon:empty {
-  background-image: url('../img/default-icon.png');
-  background-size: cover;
-  background-position: center;
-}
-
-/* Server-Details */
-.server-details {
-  flex-grow: 1;
-  min-width: 0;
-  padding-right: 130px; /* Platz lassen für die Spieleranzahl und Verbindungsanzeige */
-}
-
-.picker-header {
-  font-size: 16px;
-  font-weight: bold;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.picker-text {
-  font-size: 14px;
-  color: #cccccc;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* Spielerstatus und Verbindung ganz oben rechts */
-.server-status {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.picker-players {
-  color: #ffffff;
-  font-size: 12px;
-  font-family: monospace;
-  margin-right: 10px;
-}
-
-/* Verbindungsbalken */
-.connection-status {
-  display: flex;
-  align-items: center;
-}
-
-.signal-bar {
-  width: 1px;
-  margin-left: 1px;
-  background-color: gray;
-  transition: background-color 0.3s ease;
-}
-
-.signal-bar:nth-child(1) { height: 6px; }
-.signal-bar:nth-child(2) { height: 8px; }
-.signal-bar:nth-child(3) { height: 10px; }
-.signal-bar:nth-child(4) { height: 12px; }
-.signal-bar:nth-child(5) { height: 14px; }
-
-    /* Hier ist die Scrollfunktion */
-  #picker-menu {
-    max-height: 400px; /* Festgelegte Höhe für das Menü */
-    overflow-y: auto; /* Scrollen bei Überfüllung */
-  }
-
-</style>
-
-<section class="picker-button-wrapper picker-buttons"><a href="../loading">
-  <div class="button picker-button1 grid-button1"><span>Play Selected World</span></div>
-  </a> <a href="../loading">
-  <div class="button picker-button1 grid-button2"><span>Create New World</span></div>
-  </a> <a href="https://flo8998.github.io/HTML-Minecraft/docs/">
-  <div class="button picker-button2 grid-button3" disabled><span>Rename</span></div>
-  </a> <a href="https://flo8998.github.io/HTML-Minecraft/docs/">
-  <div class="button picker-button2 grid-button4" disabled><span>Delete</span></div>
-  </a> <a href="https://flo8998github.io/HTML-Minecraft/docs/">
-  <div class="button picker-button2 grid-button5"><span>Re-Create</span></div>
-  </a> <a href="../">
-  <div class="button picker-button2 grid-button6"><span>Cancel</span></div>
-  </a></section>
 <footer> <span class="left">Made by <a class="bold" href="https://github.com/flo8998">Flo</a>.</span> <span class="right">This site is not an official Minecraft product, nor is it approved by or associated with Mojang.</span> </footer>
 </body>
 </html>
