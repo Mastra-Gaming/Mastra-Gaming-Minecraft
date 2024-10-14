@@ -1,4 +1,3 @@
-## Welcome to Steve's HTML-Minecraft Template
 When modifying the template some experience with HTML (and CSS) would be helpful. However, if you don't have any experience with HTML I'll try and keep it as simple as possible and if it's still too hard, create an issue or something (yes you can create issues for questions too).
 
 ### Things in the documentation:
