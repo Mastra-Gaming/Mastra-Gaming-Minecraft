@@ -16,6 +16,6 @@
 	<p class="heading">============<br><span>Error: <?php echo http_response_code();?></span><br>============</p>
   <p>There was an error while accessing the Webpage at <wbr><?php echo $_SERVER['HTTP_HOST'] . "<wbr>" . $_SERVER['REQUEST_URI']?></p>
 </main>
-<footer> <span class="left">Made by <a class="bold" href="https://github.com/flo8998">Flo</a>.</span> <span class="right">This site is not an official Minecraft product, nor is it approved by or associated with Mojang.</span> </footer>
+<footer> <span class="left"><a class="bold" href="https://github.com/mastra-gaming">&copy; 2024 Mastra-Gaming. All rights reserved.</a></span> <span class="right">This site is not an official Minecraft product, nor is it approved by or associated with Mojang.</span> </footer>
 </body>
 </html>
