@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Error: <?php echo http_response_code();?> - Steve's HTML Minecraft Template</title>
+<title>Error: <?php echo http_response_code();?> - Mastra-Gaming Minecraft Server</title>
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/credits.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -16,6 +16,6 @@
 	<p class="heading">============<br><span>Error: <?php echo http_response_code();?></span><br>============</p>
   <p>There was an error while accessing the Webpage at <wbr><?php echo $_SERVER['HTTP_HOST'] . "<wbr>" . $_SERVER['REQUEST_URI']?></p>
 </main>
-<footer> <span class="left">Template made by <a class="bold" href="https://github.com/Steve-Tech">Steve</a>.</span> <span class="right">This site is not an official Minecraft product, nor is it approved by or associated with Mojang.</span> </footer>
+<footer> <span class="left">Made by <a class="bold" href="https://github.com/flo8998">Flo</a>.</span> <span class="right">This site is not an official Minecraft product, nor is it approved by or associated with Mojang.</span> </footer>
 </body>
 </html>

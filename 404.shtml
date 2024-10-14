@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Error: 404 - Steve's HTML Minecraft Template</title>
+<title>Error: 404 - Mastra-Gaming Minecraft Server</title>
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/credits.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -16,6 +16,6 @@
 	<p class="heading">====================<br><span>Error: 404 Not Found</span><br>====================</p>
   <p>The Webpage at <wbr><!--#echo var="HTTP_HOST" --><wbr><!--#echo var="REQUEST_URI" --><wbr> could not be found</p>
 </main>
-<footer> <span class="left">Template made by <a class="bold" href="https://github.com/Steve-Tech">Steve</a>.</span> <span class="right">This site is not an official Minecraft product, nor is it approved by or associated with Mojang.</span> </footer>
+<footer> <span class="left">Made by <a class="bold" href="https://github.com/flo8998">Flo</a>.</span> <span class="right">This site is not an official Minecraft product, nor is it approved by or associated with Mojang.</span> </footer>
 </body>
 </html>

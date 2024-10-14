@@ -48,7 +48,7 @@ Then where it says `font-size: 2vw;` change the `2` to something lower and make 
   <div class="button"><span>Multiplayer</span></div>
   </a> <a href="minecraft:">
   <div class="button"><span>Minecraft Realms</span></div>
-  </a> <a href="https://steve-tech.github.io/HTML-Minecraft/docs/">
+  </a> <a href="https://flo8998.io/HTML-Minecraft/docs/">
   <div class="button button_small left"><span>Options...</span></div>
   </a> <a href="javascript:window.open('','_self').close();">
   <div class="button button_small right"><span>Quit Game</span></div>
@@ -62,9 +62,9 @@ The text between the `<span>` & `</span>` is the text shown on the buttons; and 
   <div class="button"><span>This is the first button it opens minecraft</span></div>
   </a> <a href="https://www.google.com/">
   <div class="button"><span>This is the second button it opens Google</span></div>
-  </a> <a href="https://github.com/Steve-Tech">
+  </a> <a href="https://github.com/flo8998>
   <div class="button"><span>This is the third button it opens my GitHub</span></div>
-  </a> <a href="https://steve-tech.github.io/HTML-Minecraft/docs/">
+  </a> <a href="https://flo8998.github.io/HTML-Minecraft/docs/">
   <div class="button button_small left"><span>This opens the Docs</span></div>
   </a> <a href="javascript:window.open('','_self').close();"> <!-- This was me testing but it doesn't really work -->
   <div class="button button_small right"><span>This tries to close the tab</span></div>
