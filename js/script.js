@@ -26,11 +26,18 @@ function scaleGUI(scale) {
 // Funktion zur Aktualisierung der Verbindungsbalken basierend auf der Latenz
 function updateConnectionBars(latency, server) {
     const bars = document.getElementById(server.connectionElement).querySelectorAll('.bar');
-    const filledBars = Math.max(0, Math.min(5, Math.floor(5 - (latency / 200))));
-
-    bars.forEach((bar, index) => {
-        bar.style.backgroundColor = index < filledBars ? "limegreen" : "black";
-    });
+    if (latency === null) {
+        // Server ist offline, setze Balken auf Grau
+        bars.forEach(bar => {
+            bar.style.backgroundColor = "grey";
+        });
+    } else {
+        // Server ist online, setze Balken basierend auf der Latenz
+        const filledBars = Math.max(0, Math.min(5, Math.floor(5 - (latency / 200))));
+        bars.forEach((bar, index) => {
+            bar.style.backgroundColor = index < filledBars ? "limegreen" : "black";
+        });
+    }
 }
 
 // Funktion zur Serverstatus-Abfrage
@@ -42,7 +49,9 @@ async function fetchServerStatus(server) {
         if (data && data.players) {
             // Update player count
             document.getElementById(server.playersElement).innerText = `${data.players.online}/${data.players.max}`;
-        }document.getElementById(server.nameElement).textContent = server.ip;
+        }
+        
+        document.getElementById(server.nameElement).textContent = server.ip;
 
         if (data && data.description) {
             // Update MOTD
@@ -52,6 +61,12 @@ async function fetchServerStatus(server) {
         if (data && data.latency) {
             // Update connection bars
             updateConnectionBars(data.latency, server);
+            // Entferne die "offline"-Klasse, wenn der Server online ist
+            document.getElementById(server.connectionElement).classList.remove('offline');
+        } else {
+            // Wenn keine Latenz verfügbar ist, setze die Balken auf Grau und markiere als offline
+            updateConnectionBars(null, server);
+            document.getElementById(server.connectionElement).classList.add('offline');
         }
 
         // Set server icon if available
@@ -66,8 +81,12 @@ async function fetchServerStatus(server) {
 
     } catch (error) {
         console.error(`Error fetching server status for ${server.ip}:`, error);
+        // Server ist offline, setze Balken auf Grau und markiere als offline
+        updateConnectionBars(null, server);
+        document.getElementById(server.connectionElement).classList.add('offline');
     }
 }
+
 let selectedServer = null;
 
 function selectServer(element) {

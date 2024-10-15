@@ -71,9 +71,9 @@ footer {
 	align-items: center;
 	justify-content: space-between;
 	position: relative;
-	margin-bottom: 15px;
+	margin-bottom: 25px; /* Erhöhen des unteren Abstands zwischen Einträgen */
 	width: 600px;
-	height: 80px;
+	height: auto; /* Höhe automatisch anpassen, um Überlappungen zu vermeiden */
 	color: white;
 	font-family: "Minecraft", monospace;
 	cursor: pointer; /* Macht den Eintrag anklickbar */
@@ -95,16 +95,16 @@ footer {
   }
   .server-status {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 0px;
+	right: 0px;
 	display: flex;
-	align-items: center;
+	align-items: right;
   }
 #picker-menu {
 	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
 	box-shadow: inset -5px 0px 20px 2px #000, inset 5px 0px 20px 2px #000;
 	width: 100vw;
-	padding: 00vh 0;
+	padding: 2vh 0;
 }
 #picker-menu div {
 	width: 50%;
@@ -242,30 +242,40 @@ transition: transform 0.3s ease; /* Sanfte Übergänge bei Skalierung */
     content: '';
     display: none;
 }
-  .minecraft-text {
+.minecraft-text {
 	font-family: 'Minecraft', sans-serif;
 	color: white;
 	font-size: 20px;
 	text-align: center;
 	letter-spacing: 2px;
+
+	display: flex; /* Flexbox verwenden, um die horizontale und vertikale Ausrichtung zu ermöglichen */
+	justify-content: center; /* Horizontale Zentrierung */
+	align-items: center; /* Vertikale Zentrierung */
+	height: 80px; /* Gleiche Höhe wie die Server-Einträge */
+	margin-bottom: 25px; /* Optionaler Abstand nach unten */
 }
-  @keyframes loading {
+
+@keyframes loading {
 	0% { content: "○ ○ ○"; }
 	33% { content: "● ○ ○"; }
 	66% { content: "● ● ○"; }
 	100% { content: "● ● ●"; }
 }
+
 .loading:after {
 	content: "○ ○ ○";
 	display: inline-block;
 	margin-left: 10px;
 	animation: loading 1.5s infinite steps(3);
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
+
 #topbar {
     margin: 0 auto;
 }
@@ -275,17 +285,12 @@ transition: transform 0.3s ease; /* Sanfte Übergänge bei Skalierung */
     margin: 50px auto 0 auto;
     width: 62px;
     height: 32px;
-    /* Falls du einen Reflektionseffekt möchtest, ansonsten auskommentieren */
-    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.2));
-    border: none;  /* Keine äußere Linien */
 }
 
 #bars .bar {
     position: absolute;
     bottom: 0;
     width: 10px;
-    border: none;  /* Keine äußeren Linien an den Balken */
-    box-shadow: none; /* Keine Schatten an den Balken */
 }
 
 #bars .bar:nth-child(1) {
@@ -316,4 +321,8 @@ transition: transform 0.3s ease; /* Sanfte Übergänge bei Skalierung */
     background: green;
     height: 30px;
     left: 52px;
+}
+/* Wenn der Server offline ist */
+#bars.offline .bar {
+    background: grey; /* Balken in Grau, wenn offline */
 }
