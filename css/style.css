@@ -62,11 +62,49 @@ footer {
 	color: #FFFF00;
 	font-size: 2vw;
 }
+.server-entry {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 15px;
+	border: 1px solid #555;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	margin-bottom: 15px;
+	width: 600px;
+	height: 80px;
+	color: white;
+	font-family: "Minecraft", monospace;
+	cursor: pointer; /* Macht den Eintrag anklickbar */
+	transition: background-color 0.3s;
+}
+
+.server-entry:hover {
+	background-color: rgba(0, 0, 0, 0.7); /* Visuelles Feedback beim Hover */
+}
+
+.server-entry.selected {
+	background-color: rgba(0, 128, 0, 0.7); /* Hebt die Auswahl hervor */
+}
+
+  .server-details {
+	flex-grow: 1;
+	min-width: 0;
+	padding-right: 130px; /* Platz lassen für die Spieleranzahl und Verbindungsanzeige */
+  }
+  .server-status {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	display: flex;
+	align-items: center;
+  }
 #picker-menu {
 	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
 	box-shadow: inset -5px 0px 20px 2px #000, inset 5px 0px 20px 2px #000;
 	width: 100vw;
-	padding: 20vh 0;
+	padding: 00vh 0;
 }
 #picker-menu div {
 	width: 50%;
@@ -159,9 +197,11 @@ footer {
 }
 footer .right {
 	margin-right: 10px;
-}    /* Hier ist die Scrollfunktion */
+}    
+
+/* Hier ist die Scrollfunktion */
 #picker-menu {
-max-height: 400px; /* Festgelegte Höhe für das Menü */
+max-height: 550px; /* Festgelegte Höhe für das Menü */
 overflow-y: auto; /* Scrollen bei Überfüllung */
 }
 
@@ -191,4 +231,87 @@ transition: transform 0.3s ease; /* Sanfte Übergänge bei Skalierung */
 	height: 64px;
 	border-radius: 10px;
 	margin-right: 10px;
+	background-size: cover;
+    background-position: center;
   }
+/* Wenn das Server-Icon kein Bild hat (also leer ist) */
+.server-icon:empty {
+    background-image: url('../img/default-icon.png'); /* Platzhalterbild */
+}
+/* Versteckt den Text, wenn das Icon leer ist */
+.server-icon:empty::before {
+    content: '';
+    display: none;
+}
+  .minecraft-text {
+	font-family: 'Minecraft', sans-serif;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	letter-spacing: 2px;
+}
+  @keyframes loading {
+	0% { content: "○ ○ ○"; }
+	33% { content: "● ○ ○"; }
+	66% { content: "● ● ○"; }
+	100% { content: "● ● ●"; }
+}
+.loading:after {
+	content: "○ ○ ○";
+	display: inline-block;
+	margin-left: 10px;
+	animation: loading 1.5s infinite steps(3);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#topbar {
+    margin: 0 auto;
+}
+
+#bars {
+    position: relative;
+    margin: 50px auto 0 auto;
+    width: 62px;
+    height: 32px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.2));
+}
+
+#bars .bar {
+    position: absolute;
+    bottom: 0;
+    width: 10px;
+}
+
+#bars .bar:nth-child(1) {
+    background: green;
+    height: 10px;
+    left: 0px;
+}
+
+#bars .bar:nth-child(2) {
+    background: green;
+    height: 15px;
+    left: 13px;
+}
+
+#bars .bar:nth-child(3) {
+    background: green;
+    height: 20px;
+    left: 26px;
+}
+
+#bars .bar:nth-child(4) {
+    background: green;
+    height: 25px;
+    left: 39px;
+}
+
+#bars .bar:nth-child(5) {
+    background: green;
+    height: 30px;
+    left: 52px;
+}

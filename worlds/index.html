@@ -18,7 +18,7 @@
 
 <section id="picker-menu">
   <!-- Server 1 -->
-  <div id="picker-menu-1" class="server-entry">
+  <div id="picker-menu-1" class="server-entry" onclick="selectServer(this)">
     <img id="server-icon-1" alt="Server Icon" class="server-icon">
     <div class="server-details">
       <span class="picker-header" id="server-name-1">Offline</span>
@@ -40,7 +40,7 @@
   </div>
 
   <!-- Server 2 -->
-  <div id="picker-menu-2" class="server-entry">
+  <div id="picker-menu-2" class="server-entry" onclick="selectServer(this)">
     <img id="server-icon-2" alt="Server Icon" class="server-icon">
     <div class="server-details">
       <span class="picker-header" id="server-name-2">Offline</span>
@@ -62,7 +62,7 @@
   </div>
 
   <!-- Server 3 -->
-  <div id="picker-menu-3" class="server-entry">
+  <div id="picker-menu-3" class="server-entry" onclick="selectServer(this)">
     <img id="server-icon-3" alt="Server Icon" class="server-icon">
     <div class="server-details">
       <span class="picker-header" id="server-name-3">Offline</span>
@@ -84,7 +84,7 @@
   </div>
 
   <!-- Server 4 -->
-  <div id="picker-menu-4" class="server-entry">
+  <div id="picker-menu-4" class="server-entry" onclick="selectServer(this)">
     <img id="server-icon-4" alt="Server Icon" class="server-icon">
     <div class="server-details">
       <span class="picker-header" id="server-name-4">Offline</span>
@@ -106,7 +106,7 @@
   </div>
 
   <!-- Server 5 -->
-  <div id="picker-menu-5" class="server-entry">
+  <div id="picker-menu-5" class="server-entry" onclick="selectServer(this)">
     <img id="server-icon-5" alt="Server Icon" class="server-icon">
     <div class="server-details">
       <span class="picker-header" id="server-name-5">Offline</span>
@@ -126,10 +126,14 @@
       </div>
     </div>
   </div>
+  <div class="minecraft-text">
+    Suche nach Spielen im lokalen Netzwerk
+    <div class="loading"></div>
 </section>
 
+</div>
     <section class="picker-button-wrapper picker-buttons"><a href="../loading">
-  <div class="button picker-button1 grid-button1"><span>Server beitreten</span></div>
+  <div class="button picker-button1 grid-button1" onclick="useSelectedServer()"><span>Server beitreten</span></div>
   </a> <a href="../loading">
   <div class="button picker-button1 grid-button2"><span>Server hinzufügen</span></div>
   </a> <a href="https://mastra-gaming.de">
@@ -144,63 +148,6 @@
 
   <script src="../js/script.js"></script>
 
-<!-- Include the CSS directly for signal bars -->
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-#topbar {
-    margin: 0 auto;
-}
-
-#bars {
-    position: relative;
-    margin: 50px auto 0 auto;
-    width: 62px;
-    height: 30px;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.2));
-}
-
-#bars .bar {
-    position: absolute;
-    bottom: 0;
-    width: 10px;
-}
-
-#bars .bar:nth-child(1) {
-    background: green;
-    height: 10px;
-    left: 0px;
-}
-
-#bars .bar:nth-child(2) {
-    background: green;
-    height: 15px;
-    left: 13px;
-}
-
-#bars .bar:nth-child(3) {
-    background: green;
-    height: 20px;
-    left: 26px;
-}
-
-#bars .bar:nth-child(4) {
-    background: green;
-    height: 25px;
-    left: 39px;
-}
-
-#bars .bar:nth-child(5) {
-    background: green;
-    height: 30px;
-    left: 52px;
-}
-
-</style>
 <footer> <span class="left"><a class="bold" href="https://github.com/mastra-gaming">&copy; 2024 Mastra-Gaming. All rights reserved.</a></span> <span class="right">This site is not an official Minecraft product, nor is it approved by or associated with Mojang.</span> </footer>
 </body>
 </html>

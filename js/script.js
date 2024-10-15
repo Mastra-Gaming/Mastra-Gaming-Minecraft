@@ -63,8 +63,29 @@ async function fetchServerStatus(server) {
             iconElement.src = "../img/default-icon.png";
             iconElement.alt = "Server Icon";
         }
+
     } catch (error) {
         console.error(`Error fetching server status for ${server.ip}:`, error);
+    }
+}
+let selectedServer = null;
+
+function selectServer(element) {
+    // Entferne die "selected"-Klasse von allen Einträgen
+    const entries = document.querySelectorAll('.server-entry');
+    entries.forEach(entry => entry.classList.remove('selected'));
+    
+    // Füge die "selected"-Klasse dem geklickten Eintrag hinzu
+    element.classList.add('selected');
+    selectedServer = element; // Speichere das ausgewählte Element
+}
+
+function useSelectedServer() {
+    if (selectedServer) {
+        alert('Ausgewählter Server: ' + selectedServer.textContent);
+        // Hier kannst du weitere Aktionen ausführen, z.B. den Server nutzen
+    } else {
+        alert('Bitte einen Server auswählen.');
     }
 }
 
