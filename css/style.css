@@ -114,7 +114,6 @@ footer {
 	font-size: 1vw;
 }
 #picker-menu div:not(.active-world):hover, .active-world {
-	border: solid #FFF 2px;
 	padding: calc(1% - 2px) calc(2% - 2px);
 }
 #picker-title {
@@ -267,7 +266,6 @@ transition: transform 0.3s ease; /* Sanfte Übergänge bei Skalierung */
     padding: 0;
     box-sizing: border-box;
 }
-
 #topbar {
     margin: 0 auto;
 }
@@ -277,13 +275,17 @@ transition: transform 0.3s ease; /* Sanfte Übergänge bei Skalierung */
     margin: 50px auto 0 auto;
     width: 62px;
     height: 32px;
+    /* Falls du einen Reflektionseffekt möchtest, ansonsten auskommentieren */
     -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.2));
+    border: none;  /* Keine äußere Linien */
 }
 
 #bars .bar {
     position: absolute;
     bottom: 0;
     width: 10px;
+    border: none;  /* Keine äußeren Linien an den Balken */
+    box-shadow: none; /* Keine Schatten an den Balken */
 }
 
 #bars .bar:nth-child(1) {
