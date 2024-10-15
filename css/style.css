@@ -159,6 +159,15 @@ footer {
 }
 footer .right {
 	margin-right: 10px;
+}    /* Hier ist die Scrollfunktion */
+#picker-menu {
+max-height: 400px; /* Festgelegte Höhe für das Menü */
+overflow-y: auto; /* Scrollen bei Überfüllung */
+}
+
+#picker-menu {
+transform-origin: top center; /* Das Skalierungszentrum festlegen */
+transition: transform 0.3s ease; /* Sanfte Übergänge bei Skalierung */
 }
 @keyframes FlashingText {
 	0% {
@@ -176,3 +185,10 @@ footer .right {
 		background-position-x: 1000%;
 	}
 }
+/* Server-Icon */
+.server-icon {
+	width: 64px;
+	height: 64px;
+	border-radius: 10px;
+	margin-right: 10px;
+  }
