@@ -94,12 +94,18 @@ footer {
 	padding-right: 130px; /* Platz lassen für die Spieleranzahl und Verbindungsanzeige */
   }
   .server-status {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	display: flex;
-	align-items: right;
-  }
+    position: absolute;
+    top: 0px; /* Abstand von oben innerhalb der Server-Box */
+    right: 0px; /* Abstand von rechts innerhalb der Server-Box */
+    display: flex;
+    align-items: right;
+    justify-content: flex-end; /* Elemente nach rechts ausrichten */
+}
+
+.player-count {
+    margin-right: 10px; /* Abstand zwischen Spieleranzahl und Verbindungsbalken */
+    font-size: 1.2vw; /* Schriftgröße für die Spieleranzahl */
+}
 #picker-menu {
 	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
 	box-shadow: inset -5px 0px 20px 2px #000, inset 5px 0px 20px 2px #000;
@@ -107,7 +113,7 @@ footer {
 	padding: 2vh 0;
 }
 #picker-menu div {
-	width: 50%;
+	width: 40%;
 	text-align: left;
 	margin: auto;
 	padding: 1% 2%;
@@ -242,49 +248,49 @@ transition: transform 0.3s ease; /* Sanfte Übergänge bei Skalierung */
     content: '';
     display: none;
 }
-.minecraft-text {
-	font-family: 'Minecraft', sans-serif;
+  .minecraft-text {
+	font-family: "Minecraft", monospace;
 	color: white;
 	font-size: 20px;
 	text-align: center;
+	margin: auto;
 	letter-spacing: 2px;
-
-	display: flex; /* Flexbox verwenden, um die horizontale und vertikale Ausrichtung zu ermöglichen */
-	justify-content: center; /* Horizontale Zentrierung */
-	align-items: center; /* Vertikale Zentrierung */
-	height: 80px; /* Gleiche Höhe wie die Server-Einträge */
-	margin-bottom: 25px; /* Optionaler Abstand nach unten */
+	padding: 15px;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	margin-bottom: 25px; /* Erhöhen des unteren Abstands zwischen Einträgen */
+	width: 600px;
+	height: auto; /* Höhe automatisch anpassen, um Überlappungen zu vermeiden */
 }
-
-@keyframes loading {
+  @keyframes loading {
 	0% { content: "○ ○ ○"; }
 	33% { content: "● ○ ○"; }
 	66% { content: "● ● ○"; }
 	100% { content: "● ● ●"; }
 }
-
 .loading:after {
 	content: "○ ○ ○";
 	display: inline-block;
 	margin-left: 10px;
 	animation: loading 1.5s infinite steps(3);
 }
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+*{
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
 }
-
 #topbar {
     margin: 0 auto;
+	align-items: right;
 }
 
 #bars {
     position: relative;
     margin: 50px auto 0 auto;
-    width: 62px;
+    width: 0px;
     height: 32px;
+	align-items: right;
 }
 
 #bars .bar {
