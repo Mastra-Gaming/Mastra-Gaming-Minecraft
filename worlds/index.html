@@ -18,7 +18,7 @@
 
 <section id="picker-menu">
   <!-- Server 1 -->
-  <div id="picker-menu-1" class="server-entry" onclick="selectServer(this)">
+  <div id="picker-menu-1" class="server-entry" onclick="selectServer(this, '../worlds/server1.html')">
     <img id="server-icon-1" alt="Server Icon" class="server-icon">
     <div class="server-details">
       <span class="picker-header" id="server-name-1">Offline</span>
@@ -40,7 +40,7 @@
   </div>
 
   <!-- Server 2 -->
-  <div id="picker-menu-2" class="server-entry" onclick="selectServer(this)">
+  <div id="picker-menu-2" class="server-entry" onclick="selectServer(this, '../worlds/server2.html')">
     <img id="server-icon-2" alt="Server Icon" class="server-icon">
     <div class="server-details">
       <span class="picker-header" id="server-name-2">Offline</span>
@@ -62,7 +62,7 @@
   </div>
 
   <!-- Server 3 -->
-  <div id="picker-menu-3" class="server-entry" onclick="selectServer(this)">
+  <div id="picker-menu-3" class="server-entry" onclick="selectServer(this, '../worlds/server3.html')">
     <img id="server-icon-3" alt="Server Icon" class="server-icon">
     <div class="server-details">
       <span class="picker-header" id="server-name-3">Offline</span>
@@ -84,7 +84,7 @@
   </div>
 
   <!-- Server 4 -->
-  <div id="picker-menu-4" class="server-entry" onclick="selectServer(this)">
+  <div id="picker-menu-4" class="server-entry" onclick="selectServer(this, '../worlds/server4.html')">
     <img id="server-icon-4" alt="Server Icon" class="server-icon">
     <div class="server-details">
       <span class="picker-header" id="server-name-4">Offline</span>
@@ -106,7 +106,7 @@
   </div>
 
   <!-- Server 5 -->
-  <div id="picker-menu-5" class="server-entry" onclick="selectServer(this)">
+  <div id="picker-menu-5" class="server-entry" onclick="selectServer(this, '../worlds/server5.html')">
     <img id="server-icon-5" alt="Server Icon" class="server-icon">
     <div class="server-details">
       <span class="picker-header" id="server-name-5">Offline</span>
@@ -132,8 +132,8 @@
 </section>
 
 </div>
-    <section class="picker-button-wrapper picker-buttons"><a href="../loading">
-  <div class="button picker-button1 grid-button1" onclick="useSelectedServer()"><span>Server beitreten</span></div>
+<section class="picker-button-wrapper picker-buttons">
+  <a href="javascript:void(0)" id="join-server-button" class="button picker-button1 grid-button1" onclick="joinSelectedServer()" disabled><span>Server beitreten</span></a>
   </a> <a href="../loading">
   <div class="button picker-button1 grid-button2"><span>Server hinzufügen</span></div>
   </a> <a href="https://mastra-gaming.de">

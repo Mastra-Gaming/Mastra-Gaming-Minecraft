@@ -87,26 +87,31 @@ async function fetchServerStatus(server) {
     }
 }
 
-let selectedServer = null;
+let selectedServerURL = null;  // Variable zum Speichern der ausgewählten Server-URL
 
-function selectServer(element) {
-    // Entferne die "selected"-Klasse von allen Einträgen
-    const entries = document.querySelectorAll('.server-entry');
-    entries.forEach(entry => entry.classList.remove('selected'));
-    
-    // Füge die "selected"-Klasse dem geklickten Eintrag hinzu
+// Funktion zum Auswählen eines Servers
+function selectServer(element, serverURL) {
+    selectedServerURL = serverURL;  // Speichert die URL des ausgewählten Servers
+
+    // Aktivieren des "Server beitreten"-Buttons
+    const joinButton = document.getElementById("join-server-button");
+    joinButton.removeAttribute("disabled");
+
+    // Visuelles Feedback, welcher Server ausgewählt wurde
+    document.querySelectorAll('.server-entry').forEach(entry => entry.classList.remove('selected'));
     element.classList.add('selected');
-    selectedServer = element; // Speichere das ausgewählte Element
 }
 
-function useSelectedServer() {
-    if (selectedServer) {
-        alert('Ausgewählter Server: ' + selectedServer.textContent);
-        // Hier kannst du weitere Aktionen ausführen, z.B. den Server nutzen
+// Funktion, um den ausgewählten Server zu betreten
+function joinSelectedServer() {
+    if (selectedServerURL) {
+        // Zuerst zur Loading-Seite und die Server-URL als Parameter übergeben
+        window.location.href = "../loading/index.html?server=" + encodeURIComponent(selectedServerURL);
     } else {
-        alert('Bitte einen Server auswählen.');
+        alert("Bitte wähle zuerst einen Server aus.");
     }
 }
+
 
 // Funktion zum Abrufen der Serverdetails für alle Server
 function fetchAllServerDetails() {

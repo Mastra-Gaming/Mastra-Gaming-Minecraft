@@ -1,0 +1,9 @@
+/* dev.css */
+
+/* Hintergrundbild für den Body */
+body {
+    background-image: url('../img/dev_Wallpaper.png'); /* Pfad zum Hintergrundbild */
+    background-size: cover; /* Bild deckt den gesamten Hintergrund ab */
+    background-position: center; /* Bild wird zentriert */
+    background-repeat: no-repeat; /* Bild wird nicht wiederholt */
+}

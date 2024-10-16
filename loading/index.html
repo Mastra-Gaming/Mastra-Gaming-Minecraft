@@ -7,22 +7,42 @@
 <link rel="stylesheet" href="../css/style.css" />
 <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
 <link rel="icon" href="../favicon.ico" type="image/x-icon" />
-<meta http-equiv="Refresh" content="5;url=minecraft:">
 </head>
 <body>
 <h1 id="loading-title">Loading Terrain <span id="loading-dots">.</span></h1>
+
 <script>
-var dots = window.setInterval( function() {
-var wait = document.getElementById("loading-dots");
-if ( wait.innerHTML.length > 2 ) 
-wait.innerHTML = "";
-else 
-wait.innerHTML += ".";
+// Animation für die Punkte im Ladebildschirm
+var dots = window.setInterval(function() {
+    var wait = document.getElementById("loading-dots");
+    if (wait.innerHTML.length > 2) 
+        wait.innerHTML = "";
+    else 
+        wait.innerHTML += ".";
 }, 1000);
-setTimeout(function(){
-window.location.href = '../';
-}, 10000);
- </script>
-<footer> <span class="left"><a class="bold" href="https://github.com/mastra-gaming">&copy; 2024 Mastra-Gaming. All rights reserved.</a></span> <span class="right">This site is not an official Minecraft product, nor is it approved by or associated with Mojang.</span> </footer>
+
+// Auslesen der Server-URL aus dem Query-Parameter
+function getQueryParameter(param) {
+    var urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+// Holen der Server-URL aus dem Query-String
+var serverURL = getQueryParameter("server");
+
+// Nach 5 Sekunden zur spezifischen Serverseite weiterleiten
+setTimeout(function() {
+    if (serverURL) {
+        window.location.href = serverURL;  // Weiterleitung zur ausgewählten Serverseite
+    } else {
+        window.location.href = '../';  // Zurück zur Startseite, falls keine Server-URL vorhanden
+    }
+}, 5000);
+</script>
+
+<footer>
+    <span class="left"><a class="bold" href="https://github.com/mastra-gaming">&copy; 2024 Mastra-Gaming. All rights reserved.</a></span>
+    <span class="right">This site is not an official Minecraft product, nor is it approved by or associated with Mojang.</span>
+</footer>
 </body>
 </html>

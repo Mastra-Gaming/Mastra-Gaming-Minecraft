@@ -62,6 +62,9 @@ footer {
 	color: #FFFF00;
 	font-size: 2vw;
 }
+input[type="radio"] {
+	display: none; /* Versteckt die Radio-Buttons */
+}
 .server-entry {
 	background-color: rgba(0, 0, 0, 0.5);
 	padding: 15px;
@@ -79,6 +82,12 @@ footer {
 	cursor: pointer; /* Macht den Eintrag anklickbar */
 	transition: background-color 0.3s;
 }
+/* Stil für ausgewählten Server */
+.server-entry.selected {
+    border: 2px solid #00ff00; /* Beispiel: grüner Rand für ausgewählten Server */
+    background-color: rgba(0, 255, 0, 0.1); /* Leicht grün hinterlegt */
+}
+
 
 .server-entry:hover {
 	background-color: rgba(0, 0, 0, 0.7); /* Visuelles Feedback beim Hover */
