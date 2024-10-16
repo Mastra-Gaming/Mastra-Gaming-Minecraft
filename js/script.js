@@ -3,7 +3,8 @@ const servers = [
     { ip: "atom.mastra-gaming.de", port: 25566, playersElement: "players-server2", connectionElement: "connection-server2", nameElement: "server-name-2", motdElement: "server-motd-2", iconElement: "server-icon-2", entryElement: "picker-menu-2" },
     { ip: "train.mastra-gaming.de", port: 25567, playersElement: "players-server3", connectionElement: "connection-server3", nameElement: "server-name-3", motdElement: "server-motd-3", iconElement: "server-icon-3", entryElement: "picker-menu-3" },
     { ip: "dev.mastra-gaming.de", port: 25568, playersElement: "players-server4", connectionElement: "connection-server4", nameElement: "server-name-4", motdElement: "server-motd-4", iconElement: "server-icon-4", entryElement: "picker-menu-4" },
-    { ip: "paper.mastra-gaming.de", port: 25569, playersElement: "players-server5", connectionElement: "connection-server5", nameElement: "server-name-5", motdElement: "server-motd-5", iconElement: "server-icon-5", entryElement: "picker-menu-5" }
+    { ip: "paper.mastra-gaming.de", port: 25569, playersElement: "players-server5", connectionElement: "connection-server5", nameElement: "server-name-5", motdElement: "server-motd-5", iconElement: "server-icon-5", entryElement: "picker-menu-5" },
+    { ip: "Mastra-Gaming Forge 1.19.3", port: 25570, playersElement: "players-server6", connectionElement: "connection-server6", nameElement: "server-name-6", motdElement: "server-motd-6", iconElement: "server-icon-6", entryElement: "picker-menu-6" }
 ];
 
 // Funktion zur Übersetzung der Minecraft-Farbcodes
