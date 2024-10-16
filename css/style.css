@@ -215,7 +215,7 @@ footer .right {
 
 /* Hier ist die Scrollfunktion */
 #picker-menu {
-max-height: 550px; /* Festgelegte Höhe für das Menü */
+max-height: 600px; /* Festgelegte Höhe für das Menü */
 overflow-y: auto; /* Scrollen bei Überfüllung */
 }
 
