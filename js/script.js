@@ -87,11 +87,13 @@ async function fetchServerStatus(server) {
     }
 }
 
-let selectedServerURL = null;  // Variable zum Speichern der ausgewählten Server-URL
+let selectedServerURL = null; // Variable zum Speichern der ausgewählten Server-URL
+let isServerSelected = false; // Flag to check if a server is selected
 
 // Funktion zum Auswählen eines Servers
 function selectServer(element, serverURL) {
-    selectedServerURL = serverURL;  // Speichert die URL des ausgewählten Servers
+    selectedServerURL = serverURL; // Speichert die URL des ausgewählten Servers
+    isServerSelected = true; // Setzt das Flag auf true, wenn ein Server ausgewählt ist
 
     // Aktivieren des "Server beitreten"-Buttons
     const joinButton = document.getElementById("join-server-button");
@@ -100,6 +102,9 @@ function selectServer(element, serverURL) {
     // Visuelles Feedback, welcher Server ausgewählt wurde
     document.querySelectorAll('.server-entry').forEach(entry => entry.classList.remove('selected'));
     element.classList.add('selected');
+
+    // Aktualisiere die Zustände der Bearbeiten- und Löschen-Buttons
+    updateButtonStates();
 }
 
 // Funktion, um den ausgewählten Server zu betreten
@@ -111,6 +116,46 @@ function joinSelectedServer() {
         alert("Bitte wähle zuerst einen Server aus.");
     }
 }
+
+// Funktion zum Aktualisieren der Zustände der Bearbeiten- und Löschen-Buttons
+function updateButtonStates() {
+    const editButton = document.getElementById("edit-server-button");
+    const deleteButton = document.getElementById("delete-server-button");
+
+    if (isServerSelected) {
+        editButton.removeAttribute("disabled");
+        deleteButton.removeAttribute("disabled");
+    } else {
+        editButton.setAttribute("disabled", "true");
+        deleteButton.setAttribute("disabled", "true");
+    }
+}
+
+// Funktion zum Deselecting des Servers
+function deselectServer() {
+    selectedServerURL = null; // Setzt die URL zurück
+    isServerSelected = false; // Setzt das Flag auf false
+
+    // Deaktiviert die Buttons
+    const joinButton = document.getElementById("join-server-button");
+    joinButton.setAttribute("disabled", "true");
+
+    // Aktualisiere die Zustände der Bearbeiten- und Löschen-Buttons
+    updateButtonStates();
+
+    // Entferne visuelles Feedback
+    document.querySelectorAll('.server-entry').forEach(entry => entry.classList.remove('selected'));
+}
+
+// Beispiel für die Verwendung des Deselect-Server (z.B. beim Klicken auf einen anderen Server)
+function toggleSelection(element, serverURL) {
+    if (element.classList.contains('selected')) {
+        deselectServer(); // Wenn der Server bereits ausgewählt ist, deaktiviere die Auswahl
+    } else {
+        selectServer(element, serverURL); // Andernfalls wähle den Server aus
+    }
+}
+
 
 
 // Funktion zum Abrufen der Serverdetails für alle Server

@@ -136,11 +136,12 @@
   <a href="javascript:void(0)" id="join-server-button" class="button picker-button1 grid-button1" onclick="joinSelectedServer()" disabled><span>Server beitreten</span></a>
   </a> <a href="../loading">
   <div class="button picker-button1 grid-button2"><span>Server hinzufügen</span></div>
-  </a> <a href="https://mastra-gaming.de">
-  <div class="button picker-button2 grid-button3" disabled><span>Bearbeiten</span></div>
-  </a> <a href="https://mastra-gaming.de">
-  <div class="button picker-button2 grid-button4" disabled><span>Löschen</span></div>
-  </a> <a href="./index.html">
+  <a href="https://mastra-gaming.de">
+    <div class="button picker-button2 grid-button3" id="edit-server-button" onclick="toggleButtonState()" disabled><span>Bearbeiten</span></div>
+  </a>
+  <a href="https://mastra-gaming.de">
+    <div class="button picker-button2 grid-button4" id="delete-server-button" onclick="toggleButtonState()" disabled><span>Löschen</span></div>
+  </a><a href="./index.html">
   <div class="button picker-button2 grid-button5"><span>Aktualisieren</span></div>
   </a> <a href="../">
   <div class="button picker-button2 grid-button6"><span>Zurück</span></div>
