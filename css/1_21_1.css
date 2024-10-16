@@ -6,4 +6,6 @@ body {
     background-size: cover; /* Bild deckt den gesamten Hintergrund ab */
     background-position: center; /* Bild wird zentriert */
     background-repeat: no-repeat; /* Bild wird nicht wiederholt */
+    max-height: 600px; /* Festgelegte Höhe für das Menü */
+    overflow-y: auto; /* Scrollen bei Überfüllung */
 }
