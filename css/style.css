@@ -341,3 +341,77 @@ transition: transform 0.3s ease; /* Sanfte Übergänge bei Skalierung */
 #bars.offline .bar {
     background: grey; /* Balken in Grau, wenn offline */
 }
+* {
+	box-sizing: border-box;
+  }.gallery-container {
+	position: relative;
+	width: 80%;
+	max-width: 800px;
+	overflow: hidden;
+	background-color: #2f2f2f;
+	border: 5px solid #3e3e3e;
+	border-radius: 8px;
+	padding: 10px;
+  }
+  
+  .gallery {
+	display: flex;
+	transition: transform 0.5s ease;
+  }
+  
+  .gallery-item {
+	min-width: 100%;
+  }
+  
+  .gallery-item img {
+	width: 100%;
+	height: auto;
+	border: 5px solid #3e3e3e;
+	border-radius: 4px;
+	image-rendering: pixelated;
+  }
+  
+  .arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: #3e3e3e;
+	color: white;
+	font-size: 2rem;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	z-index: 10;
+	border-radius: 5px;
+	transition: background 0.3s;
+  }
+  
+  .arrow:hover {
+	background-color: #5f5f5f;
+  }
+  
+  .left {
+	left: 10px;
+  }
+  
+  .right {
+	right: 10px;
+  }
+/* Lightbox-Styling */
+.lightbox {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .lightbox img {
+	max-width: 90%;
+	max-height: 90%;
+	image-rendering: pixelated;
+  }
