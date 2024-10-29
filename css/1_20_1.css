@@ -98,25 +98,6 @@ summary:hover {
     background-size: 100% 300%;
     color: #A9A9A9;
 }
-/* Footer-Stil */
-footer {
-    text-align: center;
-    padding: 1vw;
-    font-size: 1vw;
-    color: #E0E0E0;
-    background-color: #333;
-    border-top: 0.2vw solid #000;
-}
-
-footer a {
-    color: #4CAF50;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #E0E0E0;
-}
 .play-pause {
     position: absolute;
     bottom: 0px;
@@ -183,4 +164,23 @@ footer a:hover {
 
 .lightbox .right {
     right: 10px;
+}
+/* Footer-Stil */
+footer {
+    text-align: center;
+    padding: 1vw;
+    font-size: 1vw;
+    color: #E0E0E0;
+    background-color: #333;
+    border-top: 0.2vw solid #000;
+}
+
+footer a {
+    color: #4CAF50;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #E0E0E0;
 }
