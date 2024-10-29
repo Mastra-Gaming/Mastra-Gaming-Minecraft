@@ -1,39 +1,67 @@
 const gallery = document.getElementById('gallery');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
+const playPauseBtn = document.getElementById('playPauseBtn'); // Button zum Pausieren und Starten
 
-const images = [];
+let images = [];
 let currentIndex = 0;
+let isPlaying = true; // Flag, um den Wiedergabestatus zu verfolgen
+let intervalId;
 
-// Lade die Bilddateien von der JSON-Datei
-fetch('../img/1_20_1/images.json') // Hier den Pfad zur JSON-Datei anpassen
+// Bilder aus der JSON-Datei laden
+fetch('../img/1_20_1/images.json') // Passe den Pfad zur JSON-Datei an
     .then(response => response.json())
     .then(data => {
-        // Füge die Bilddateinamen aus der JSON-Datei hinzu
-        data.images.forEach(file => {
-            images.push(`../img/1_20_1/${file}`);
-        });
-        // Initiales Bild anzeigen, wenn Bilder geladen sind
-        showImages();
+        images = data.images.map(file => `../img/1_20_1/${file}`); // Bilderpfad für jedes Bild
+        showImage(); // Zeigt das erste Bild an
+        startSlideshow(); // Startet die automatische Wiedergabe
     })
-    .catch(error => console.error('Error loading images:', error));
+    .catch(error => console.error('Error fetching images:', error));
 
-function showImages() {
+// Funktion zum Anzeigen des aktuellen Bildes
+function showImage() {
     gallery.innerHTML = '';
-    if (images.length > 0) { // Überprüfen, ob Bilder vorhanden sind
-        const img = document.createElement('img');
-        img.src = images[currentIndex];
-        img.alt = `Image ${currentIndex + 1}`; // Setze einen Alt-Text für das Bild
-        gallery.appendChild(img);
-    }
+    const img = document.createElement('img');
+    img.src = images[currentIndex];
+    gallery.appendChild(img);
 }
 
-prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    showImages();
+// Funktion zum Starten der automatischen Wiedergabe
+function startSlideshow() {
+    intervalId = setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage();
+    }, 3000); // Intervall auf 3 Sekunden gesetzt (3000 ms)
+    isPlaying = true;
+    playPauseBtn.textContent = "Pause"; // Button-Text auf "Pause" setzen
+}
+
+// Funktion zum Anhalten der Wiedergabe
+function pauseSlideshow() {
+    clearInterval(intervalId);
+    isPlaying = false;
+    playPauseBtn.textContent = "Play"; // Button-Text auf "Play" setzen
+}
+
+// Play/Pause-Button Funktion
+playPauseBtn.addEventListener('click', () => {
+    if (isPlaying) {
+        pauseSlideshow();
+    } else {
+        startSlideshow();
+    }
 });
 
+// Vorheriges Bild anzeigen
+prevBtn.addEventListener('click', () => {
+    pauseSlideshow(); // Pausiert die automatische Wiedergabe, wenn manuell geklickt wird
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage();
+});
+
+// Nächstes Bild anzeigen
 nextBtn.addEventListener('click', () => {
+    pauseSlideshow(); // Pausiert die automatische Wiedergabe, wenn manuell geklickt wird
     currentIndex = (currentIndex + 1) % images.length;
-    showImages();
+    showImage();
 });
