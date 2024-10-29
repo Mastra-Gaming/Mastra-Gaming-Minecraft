@@ -9,3 +9,77 @@ body {
     max-height: 600px; /* Festgelegte Höhe für das Menü */
     overflow-y: auto; /* Scrollen bei Überfüllung */
 }
+/* Stil für das Button-ähnliche Summary */
+summary {
+    padding: 0.2vw 0 0.8vw 0;
+    margin: 0 auto;
+    background: #7D7D7D url("../img/buttons.png") no-repeat center;
+    background-size: 100% 300%;
+    color: #E0E0E0;
+    font-size: 1.2vw;
+    outline: 0.2vw solid #000;
+    outline-offset: -0.2vw;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Details-Container ohne Hintergrund und Rahmen */
+.details-content {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 0vw;
+}
+
+/* Anpassungen für die Galeriecontainer */
+.gallery-container {
+    text-align: center;
+    width: 100%;
+    color: #E0E0E0;
+}
+
+/* Pfeil-Buttons für die Galerie */
+.arrow {
+    font-size: 2vw;
+    color: #E0E0E0;
+    background-color: #555555;
+    border: none;
+    cursor: pointer;
+    padding: 0.5vw;
+    border-radius: 5px;
+    margin: 0 0.5vw;
+}
+
+.arrow:hover {
+    background-color: #777777;
+}
+.button1 {
+	/* padding: 0.2% 50vw; */
+/*	padding: 0.2vw 0 0.8vw 0;*/
+	margin: 0 auto 2% auto;
+/*	background: #7D7D7D url("../img/buttons.png") no-repeat center;
+	background-size: 100% 300%;*/
+	color: #E0E0E0;
+	font-size: 1.2vw;
+/*	outline: 0.2vw solid #000;
+	outline-offset: -0.2vw;*/
+}
+/* Footer-Stil */
+footer {
+    text-align: center;
+    padding: 1vw;
+    font-size: 1vw;
+    color: #E0E0E0;
+    background-color: #333;
+    border-top: 0.2vw solid #000;
+}
+
+footer a {
+    color: #4CAF50;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #E0E0E0;
+}

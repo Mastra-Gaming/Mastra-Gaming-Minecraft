@@ -4,33 +4,56 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mastra Gaming NeoForge 1.20.1</title>
-    <link rel="stylesheet" href="../css/style.css" />    <!-- Gemeinsame CSS-Datei -->
-    <link rel="stylesheet" href="../css/1_20_1.css" />  <!-- Spezifische CSS-Datei für Server 1 -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/1_20_1.css" />
 </head>
 <body>
     <h1>Mastra Gaming NeoForge 1.20.1</h1>
-    <p>Server IP: mc.mastra-gaming.de</p>
-    <p><a href="https://mastra-gaming.de/wp-content/uploads/Modpack_NeoForge_1_20_1.zip" data-type="link" data-id="https://mastra-gaming.de/wp-content/uploads/Modpack_1_19_3.zip">Modpack 1.20.1</a><br><a href="https://mastra-gaming.de/wp-content/uploads/Ressourcepack_NeoForge_1_20_1.zip" data-type="link" data-id="https://mastra-gaming.de/wp-content/uploads/Resourcepacks_1_19_3.zip">Ressourcepacks 1.20.1</a></p><details>
-    <summary>Schienennetzplan 1.20.1</summary>
-    <iframe src="https://mtr.mastra-gaming.de" title="Schienennetzplan" width="90%" height="500"></iframe> 
-</details><details>
-    <summary>Bluemap 1.20.1</summary>
-    <iframe src="https://bluemap.mastra-gaming.de" title="Schienennetzplan" width="90%" height="500"></iframe> </details>
-    <details>
-        <summary>Bildergalerie 1.20.1</summary>
-        <div class="gallery-container">
-            <div class="gallery" id="gallery"></div>
-            <button class="arrow left" id="prevBtn">&#10094;</button>
-            <button class="arrow right" id="nextBtn">&#10095;</button>
+    <main class="button-wrapper">
+        <div class="button"><span>Server IP: mc.mastra-gaming.de</span></div>
+        
+        <p>
+            <div class="button"><a href="https://mastra-gaming.de/wp-content/uploads/Modpack_NeoForge_1_20_1.zip">Modpack 1.20.1</a></div>
+            <div class="button"><a href="https://mastra-gaming.de/wp-content/uploads/Ressourcepack_NeoForge_1_20_1.zip">Ressourcepacks 1.20.1</a></div>
+        </p>
+        
+        <div class="button1">
+            <details>
+                <summary>Schienennetzplan 1.20.1</summary>
+                <div class="details-content">
+                    <iframe src="https://mtr.mastra-gaming.de" title="Schienennetzplan" width="100%" height="500"></iframe>
+                </div>
+            </details>
         </div>
-    </details>
-  <a href="https://mastra-gaming.de">
-  <div class="button"><span>Mastra-Gaming Homepage</span></div>
-  </a>
-      <script src="../js/1_20_1.js"></script>
+
+        <div class="button1">
+            <details>
+                <summary>Bluemap 1.20.1</summary>
+                <div class="details-content">
+                    <iframe src="https://bluemap.mastra-gaming.de" title="Bluemap" width="100%" height="500"></iframe>
+                </div>
+            </details>
+        </div>
+
+        <div class="button1">
+            <details>
+                <summary>Bildergalerie 1.20.1</summary>
+                <div class="details-content gallery-container">
+                    <div class="gallery" id="gallery"></div>
+                    <button class="arrow left" id="prevBtn">&#10094;</button>
+                    <button class="arrow right" id="nextBtn">&#10095;</button>
+                </div>
+            </details>
+        </div>
+
+        <a href="https://mastra-gaming.de"><div class="button button_small"><span>Mastra-Gaming Homepage</span></div></a>
+        <a href="/"><div class="button button_small"><span>Spiel beenden</span></div></a>
+    </main>
+    
+    <script src="../js/1_20_1.js"></script>
     <footer>
         <span class="left">
-            <a class="bold" href="https://github.com/mastra-gaming">&copy; 2024 Mastra-Gaming. All rights reserved.</a>
+            <a href="https://github.com/mastra-gaming">&copy; 2024 Mastra-Gaming. All rights reserved.</a>
         </span>
         <span class="right">This site is not an official Minecraft product, nor is it approved by or associated with Mojang.</span>
     </footer>
