@@ -396,22 +396,3 @@ transition: transform 0.3s ease; /* Sanfte Übergänge bei Skalierung */
 .right {
 	right: 10px; /* Abstand vom rechten Rand */
 }
-
-/* Lightbox-Styling */
-.lightbox {
-	position: fixed; /* Fester Standort für die Lightbox */
-	top: 0;
-	left: 0;
-	width: 100vw; /* Volle Breite */
-	height: 100vh; /* Volle Höhe */
-	background: rgba(0, 0, 0, 0.8); /* Dunkler Hintergrund mit Transparenz */
-	display: flex; /* Flexbox für zentriertes Bild */
-	align-items: center; /* Vertikale Zentrierung */
-	justify-content: center; /* Horizontale Zentrierung */
-}
-
-.lightbox img {
-	max-width: 90%; /* Maximale Breite der Lightbox-Bilder */
-	max-height: 90%; /* Maximale Höhe */
-	image-rendering: pixelated; /* Pixelierte Darstellung */
-}
