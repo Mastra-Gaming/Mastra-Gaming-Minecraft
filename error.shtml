@@ -16,6 +16,6 @@
 	<p class="heading">====================<br><span>Error: <!--#echo var="REDIRECT_STATUS" --></span><br>====================</p>
   <p>There was an error while accessing the Webpage at <wbr><!--#echo var="HTTP_HOST" --><wbr><!--#echo var="REQUEST_URI" --></p>
 </main>
-<footer> <span class="left"><a class="bold" href="https://github.com/mastra-gaming">&copy; 2024 Mastra-Gaming. All rights reserved.</a></span> <span class="right">This site is not an official Minecraft product, nor is it approved by or associated with Mojang.</span> </footer>
+<footer> <span class="left"><a class="bold" href="https://github.com/mastra-gaming">&copy; 2025 Mastra-Gaming. All rights reserved.</a></span> <span class="right">This site is not an official Minecraft product, nor is it approved by or associated with Mojang.</span> </footer>
 </body>
 </html>
