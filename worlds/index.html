@@ -9,168 +9,101 @@
 <link rel="icon" href="../favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  
+
 <h2 id="picker-title">Server auswählen</h2>
 
-  <div style="margin: 20px;">
+<div style="margin: 20px;">
   <label for="gui-scale">GUI Scale: </label>
   <input type="range" id="gui-scale" name="gui-scale" min="1" max="2" step="0.1" value="1" oninput="scaleGUI(this.value)">
 </div>
 
 <section id="picker-menu">
   <!-- Server 1 -->
-  <div id="picker-menu-1" class="server-entry" onclick="selectServer(this, '../worlds/1_20_1.html')">
-    <img id="server-icon-1" alt="Server Icon" class="server-icon">
-    <div class="server-details">
-      <span class="picker-header" id="server-name-1">Offline</span>
-      <br>
-      <span class="picker-text" id="server-motd-1">Offline</span>
-    </div>
-    <div class="server-status">
-      <span class="picker-players" id="players-server1">0/8</span>
-      <div id="topbar">
-        <div id="bars" class="connection-status" id="connection-server1">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-      </div>
-    </div>
+  <div class="server-entry" onclick="selectServer(this, '../worlds/1_7_10.html')">
+    <img src="https://api.loohpjames.com/serverbanner.png?ip=atom.mastra-gaming.de&timezone=Europe/Berlin" 
+         class="server-banner" 
+         alt="Minecraft Server Banner - atom.mastra-gaming.de">
   </div>
 
   <!-- Server 2 -->
-  <div id="picker-menu-2" class="server-entry" onclick="selectServer(this, '../worlds/1_7_10.html')">
-    <img id="server-icon-2" alt="Server Icon" class="server-icon">
-    <div class="server-details">
-      <span class="picker-header" id="server-name-2">Offline</span>
-      <br>
-      <span class="picker-text" id="server-motd-2">Offline</span>
-    </div>
-    <div class="server-status">
-      <span class="picker-players" id="players-server2">0/8</span>
-      <div id="topbar">
-        <div id="bars" class="connection-status" id="connection-server2">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-      </div>
-    </div>
+  <div class="server-entry" onclick="selectServer(this, '../worlds/1_12_2.html')">
+    <img src="https://api.loohpjames.com/serverbanner.png?ip=train.mastra-gaming.de&timezone=Europe/Berlin" 
+         class="server-banner" 
+         alt="Minecraft Server Banner - train.mastra-gaming.de">
   </div>
-
   <!-- Server 3 -->
-  <div id="picker-menu-3" class="server-entry" onclick="selectServer(this, '../worlds/1_12_2.html')">
-    <img id="server-icon-3" alt="Server Icon" class="server-icon">
-    <div class="server-details">
-      <span class="picker-header" id="server-name-3">Offline</span>
-      <br>
-      <span class="picker-text" id="server-motd-3">Offline</span>
-    </div>
-    <div class="server-status">
-      <span class="picker-players" id="players-server3">0/8</span>
-      <div id="topbar">
-        <div id="bars" class="connection-status" id="connection-server3">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-      </div>
-    </div>
+  <div class="server-entry" onclick="selectServer(this, '../worlds/1_20_1.html')">
+    <img src="https://api.loohpjames.com/serverbanner.png?ip=mc.mastra-gaming.de&timezone=Europe/Berlin" 
+         class="server-banner" 
+         alt="Minecraft Server Banner - mc.mastra-gaming.de">
   </div>
 
   <!-- Server 4 -->
-  <div id="picker-menu-4" class="server-entry" onclick="selectServer(this, '../worlds/dev.html')">
-    <img id="server-icon-4" alt="Server Icon" class="server-icon">
-    <div class="server-details">
-      <span class="picker-header" id="server-name-4">Offline</span>
-      <br>
-      <span class="picker-text" id="server-motd-4">Offline</span>
-    </div>
-    <div class="server-status">
-      <span class="picker-players" id="players-server4">0/8</span>
-      <div id="topbar">
-        <div id="bars" class="connection-status" id="connection-server4">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-      </div>
-    </div>
+  <div class="server-entry" onclick="selectServer(this, '../worlds/dev.html')">
+    <img src="https://api.loohpjames.com/serverbanner.png?ip=dev.mastra-gaming.de&timezone=Europe/Berlin" 
+         class="server-banner" 
+         alt="Minecraft Server Banner - dev.mastra-gaming.de">
   </div>
 
   <!-- Server 5 -->
-  <div id="picker-menu-5" class="server-entry" onclick="selectServer(this, '../worlds/1_21_1.html')">
-    <img id="server-icon-5" alt="Server Icon" class="server-icon">
-    <div class="server-details">
-      <span class="picker-header" id="server-name-5">Offline</span>
-      <br>
-      <span class="picker-text" id="server-motd-5">Offline</span>
-    </div>
-    <div class="server-status">
-      <span class="picker-players" id="players-server5">0/8</span>
-      <div id="topbar">
-        <div id="bars" class="connection-status" id="connection-server5">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-      </div>
-    </div>
+  <div class="server-entry" onclick="selectServer(this, '../worlds/1_21_1.html')">
+    <img src="https://api.loohpjames.com/serverbanner.png?ip=paper.mastra-gaming.de&timezone=Europe/Berlin" 
+         class="server-banner" 
+         alt="Minecraft Server Banner - paper.mastra-gaming.de">
   </div>
-    <!-- Server 6 -->
-    <div id="picker-menu-6" class="server-entry" onclick="selectServer(this, '../worlds/1_19_3.html')">
-      <img id="server-icon-6" alt="Server Icon" class="server-icon">
-      <div class="server-details">
-        <span class="picker-header" id="server-name-6">Mastra-Gaming Forge 1.19.3</span>
-        <br>
-        <span class="picker-text" id="server-motd-6">Offline</span>
-      </div>
-      <div class="server-status">
-        <span class="picker-players" id="players-server6">0/8</span>
-        <div id="topbar">
-          <div id="bars" class="connection-status" id="connection-server6">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+
   <div class="minecraft-text">
     Suche nach Spielen im lokalen Netzwerk
     <div class="loading"></div>
+  </div>
 </section>
 
-</div>
-<section class="picker-button-wrapper picker-buttons">
-  <a href="javascript:void(0)" id="join-server-button" class="button picker-button1 grid-button1" onclick="joinSelectedServer()" disabled><span>Server beitreten</span></a>
-  </a> <a href="../loading">
-  <div class="button picker-button1 grid-button2"><span>Server hinzufügen</span></div>
-  <a href="https://mastra-gaming.de">
-    <div class="button picker-button2 grid-button3" id="edit-server-button" onclick="toggleButtonState()" disabled><span>Bearbeiten</span></div>
-  </a>
-  <a href="https://mastra-gaming.de">
-    <div class="button picker-button2 grid-button4" id="delete-server-button" onclick="toggleButtonState()" disabled><span>Löschen</span></div>
-  </a><a href="./index.html">
-  <div class="button picker-button2 grid-button5"><span>Aktualisieren</span></div>
-  </a> <a href="../">
-  <div class="button picker-button2 grid-button6"><span>Zurück</span></div>
-  </a></section>
-
-  <script src="../js/script.js"></script>
-
+  <section class="picker-button-wrapper picker-buttons">
+    <a href="javascript:void(0)" id="join-server-button" class="button picker-button1 grid-button1" onclick="joinSelectedServer()" disabled><span>Server beitreten</span></a>
+    </a> <a href="../loading">
+    <div class="button picker-button1 grid-button2"><span>Server hinzufügen</span></div>
+    <a href="https://mastra-gaming.de">
+      <div class="button picker-button2 grid-button3" id="edit-server-button" onclick="toggleButtonState()" disabled><span>Bearbeiten</span></div>
+    </a>
+    <a href="https://mastra-gaming.de">
+      <div class="button picker-button2 grid-button4" id="delete-server-button" onclick="toggleButtonState()" disabled><span>Löschen</span></div>
+    </a><a href="./index.html">
+    <div class="button picker-button2 grid-button5"><span>Aktualisieren</span></div>
+    </a> <a href="../">
+    <div class="button picker-button2 grid-button6"><span>Zurück</span></div>
+    </a></section>
+  
+    <script>
+      // Cache-Busting für automatische Updates
+      function refreshBanners() {
+          document.querySelectorAll('.server-banner').forEach(img => {
+              img.src = img.src.split('?')[0] + '?ip=' + img.src.split('ip=')[1].split('&')[0] + 
+                       '&timezone=Europe/Berlin&cache=' + Date.now();
+          });
+      }
+      
+      // Alle 60 Sekerneu laden
+      setInterval(refreshBanners, 60000);
+      
+      // Vorhandene Funktionen
+      let selectedServer = null;
+      
+      function selectServer(element, url) {
+          selectedServer = url;
+          document.getElementById('join-server-button').disabled = false;
+          document.querySelectorAll('.server-entry').forEach(s => s.style.borderColor = '#3ba55d');
+          element.style.borderColor = '#ffaa00';
+      }
+      
+      function scaleGUI(value) {
+          document.documentElement.style.fontSize = `${value * 10}px`;
+      }
+      
+      document.getElementById('gui-scale').addEventListener('input', function(e) {
+          scaleGUI(e.target.value);
+      });
+      </script>
+      <script src="../js/script.js"></script>
 <footer> <span class="left"><a class="bold" href="https://github.com/mastra-gaming">&copy; 2025 Mastra-Gaming. All rights reserved.</a></span> <span class="right">This site is not an official Minecraft product, nor is it approved by or associated with Mojang.</span> </footer>
 </body>
 </html>

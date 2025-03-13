@@ -101,3 +101,9 @@ nextBtn.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % images.length;
     showImage();
 });
+// Öffne das Login, wenn "Strg + Escape" gedrückt wird
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'Escape') {
+        window.location.href = "../worlds/index.html";
+    }
+});
