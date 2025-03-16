@@ -9,3 +9,178 @@ body {
     max-height: 600px; /* Festgelegte Höhe für das Menü */
     overflow-y: auto; /* Scrollen bei Überfüllung */
 }
+/* Stil für das Button-ähnliche Summary */
+summary {
+    padding: 0.2vw 0 0.8vw 0;
+    margin: 0 auto;
+    background: #7D7D7D url("../img/buttons.png") no-repeat center;
+    background-size: 100% 300%;
+    color: #E0E0E0;
+    font-size: 1.2vw;
+    outline: 0.2vw solid #000;
+    outline-offset: -0.2vw;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button1:hover {
+	background: #7079AA url("../img/buttons.png") no-repeat bottom;
+	background-size: 100% 300%;
+	color: #FFFFA0;
+}
+.button1:disabled, .button1[disabled] {
+	background: #272727 url("../img/buttons.png") no-repeat top;
+	background-size: 100% 300%;
+	color: #A9A9A9;
+}
+.button1 span {
+	vertical-align: middle;
+}
+
+/* Details-Container ohne Hintergrund und Rahmen */
+.details-content {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 0vw;
+}
+
+/* Anpassungen für die Galeriecontainer */
+.gallery-container {
+    text-align: center;
+    width: 100%;
+    color: #E0E0E0;
+}
+
+/* Pfeil-Buttons für die Galerie */
+.arrow {
+    font-size: 2vw;
+    color: #E0E0E0;
+    background-color: #555555;
+    border: none;
+    cursor: pointer;
+    padding: 0.5vw;
+    border-radius: 5px;
+    margin: 0 0.5vw;
+}
+
+.arrow:hover {
+    background-color: #777777;
+}
+.button1 {
+	/* padding: 0.2% 50vw; */
+/*	padding: 0.2vw 0 0.8vw 0;*/
+	margin: 0 auto 2% auto;
+/*	background: #7D7D7D url("../img/buttons.png") no-repeat center;
+	background-size: 100% 300%;*/
+	color: #E0E0E0;
+	font-size: 1.2vw;
+    cursor: pointer;
+/*	outline: 0.2vw solid #000;
+	outline-offset: -0.2vw;*/
+}
+/* Hover-Effekt für den Summary-Tag */
+summary:hover {
+    background: #7079AA; /* Hintergrundfarbe bei Hover */
+    color: #FFFFA0; /* Textfarbe bei Hover */
+}
+
+/* Stil für den ersten Button im Hover-Zustand */
+.button1 {
+    margin: 0 auto 2% auto;
+    color: #E0E0E0;
+    font-size: 1.2vw;
+}
+
+/* Stil für deaktivierte Zustand des ersten Buttons */
+.button1:disabled,
+.button1[disabled] {
+    background: #272727 url("../img/buttons.png") no-repeat top;
+    background-size: 100% 300%;
+    color: #A9A9A9;
+}
+.play-pause {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 10px;
+    border-radius: 4px;
+}
+/* Lightbox Styling */
+.lightbox {
+    display: none; /* Standardmäßig ausgeblendet */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Hintergrund abdunkeln */
+    overflow: auto;
+}
+
+.lightbox-content {
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Lightbox Navigation Buttons */
+.lightbox .arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    transform: translateY(-50%);
+}
+
+.lightbox .left {
+    left: 10px;
+}
+
+.lightbox .right {
+    right: 10px;
+}
+/* Footer-Stil */
+footer {
+    text-align: center;
+    padding: 1vw;
+    font-size: 1vw;
+    color: #E0E0E0;
+    background-color: #333;
+    border-top: 0.2vw solid #000;
+}
+
+footer a {
+    color: #4CAF50;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #E0E0E0;
+}
