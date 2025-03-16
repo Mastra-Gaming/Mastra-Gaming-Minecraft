@@ -98,6 +98,23 @@ summary:hover {
     background-size: 100% 300%;
     color: #A9A9A9;
 }
+.modlist-table {
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+}
+
+.modlist-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.modlist-table th,
+.modlist-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
 .play-pause {
     position: absolute;
     bottom: 0px;
