@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Mastra-Gaming • Forge 1.12.2 Server</title>
+
+  <title>Mastra-Gaming • Forge 1.12.2</title>
 
   <!-- Basis-SEO -->
   <meta name="description" content="Offizieller Mastra-Gaming Minecraft-Server (Forge 1.12.2). Verbinde dich über train.mastra-gaming.de und spiele mit der Community." />
@@ -15,135 +16,87 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Mastra-Gaming • Forge 1.12.2 Server" />
   <meta property="og:description" content="Verbinde dich mit train.mastra-gaming.de und spiele Forge 1.12.2 auf dem Mastra-Gaming Server." />
-  <!-- Optional – falls du ein Social Preview Bild hast:
-  <meta property="og:image" content="https://deine-domain.tld/og-image.png" />
-  <meta property="og:image:alt" content="Mastra-Gaming Forge 1.12.2 Server" />
-  -->
+  <!-- <meta property="og:image" content="https://deine-domain.tld/og-image.png" />
+  <meta property="og:image:alt" content="Mastra-Gaming Forge 1.12.2 Server" /> -->
 
-  <!-- Styles (bestehende) -->
+  <!-- Styles: -->
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/1_12_2.css" />
+  <link rel="stylesheet" href="../css/1_20_1.css" />
 
-  <!-- Favicon (optional – anpassen, wenn vorhanden)
+  <!-- Optional: Favicons
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   -->
-
-  <!-- Kleine, lokale Verbesserungen ohne externe Abhängigkeiten -->
-  <style>
-    /* Minimaler UX-Boost, falls externe CSS es nicht schon abdeckt */
-    :root { --accent: #22c55e; }
-    .container { max-width: 960px; margin-inline: auto; padding: 2rem 1rem; }
-    .ip-box {
-      display: inline-flex; align-items: center; gap: .5rem;
-      border: 1px solid color-mix(in oklab, currentColor 20%, transparent);
-      border-radius: .75rem; padding: .5rem .75rem;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-      white-space: nowrap;
-    }
-    .btn {
-      border: 1px solid color-mix(in oklab, currentColor 20%, transparent);
-      background: transparent; border-radius: .6rem; padding: .4rem .7rem;
-      cursor: pointer; font: inherit;
-    }
-    .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-    .muted { opacity: .8; }
-    footer { border-top: 1px solid color-mix(in oklab, currentColor 15%, transparent); }
-    .footer-row {
-      display: flex; gap: 1rem; align-items: start; justify-content: space-between; flex-wrap: wrap;
-    }
-    .sr-only {
-      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
-      clip: rect(0,0,0,0); white-space: nowrap; border: 0;
-    }
-    @media (prefers-reduced-motion: no-preference) {
-      .btn { transition: transform .08s ease; }
-      .btn:active { transform: translateY(1px); }
-    }
-  </style>
 </head>
 <body>
-  <a class="sr-only" href="#main">Zum Inhalt springen</a>
+  <h1>Mastra-Gaming Forge 1.12.2</h1>
 
-  <header class="container" role="banner">
-    <h1>Mastra-Gaming Forge 1.12.2</h1>
-    <p class="muted">Offizieller Community-Server • Modloader: Forge 1.12.2</p>
-  </header>
+  <main class="button-wrapper">
+    <!-- Server-IP als Button im 1.20.1-Look -->
+    <div class="button" id="server-ip" data-ip="train.mastra-gaming.de" aria-live="polite">
+      <span>Server IP: <code>train.mastra-gaming.de</code></span>
+      <button class="copy-btn" type="button" aria-label="IP in die Zwischenablage kopieren">Kopieren</button>
+    </div>
 
-  <main id="main" class="container" role="main">
-    <section aria-labelledby="server-ip">
-      <h2 id="server-ip">Server-Adresse</h2>
-      <p>
-        <span class="ip-box" data-ip="train.mastra-gaming.de" aria-live="polite">
-          <code>train.mastra-gaming.de</code>
-          <button class="btn" id="copy-ip" type="button" aria-label="IP in die Zwischenablage kopieren">Kopieren</button>
-        </span>
-      </p>
-      <p class="muted">Tipp: Klicke auf „Kopieren“, füge die Adresse in Minecraft unter „Mehrspieler → Server hinzufügen“ ein.</p>
-    </section>
-
-    <section aria-labelledby="join">
-      <h2 id="join">So joinst du</h2>
-      <ol>
-        <li>Starte <strong>Mastra-Gaming 1.12.2</strong> mit <strong>Forge</strong>.</li>
-        <li>Gehe zu <em>Mehrspieler</em> → <em>Server hinzufügen</em>.</li>
-        <li>Gib die Adresse <code>train.mastra-gaming.de</code> ein und bestätige.</li>
-      </ol>
-    </section>
+    <!-- So joinst du -->
+    <div class="button1">
+      <details>
+        <summary>So joinst du</summary>
+        <div class="details-content">
+          <ol>
+            <li>Starte <strong>Mastra-Gaming 1.12.2</strong> mit <strong>Forge</strong>.</li>
+            <li>Gehe zu <em>Mehrspieler</em> → <em>Server hinzufügen</em>.</li>
+            <li>Gib die Adresse <code>train.mastra-gaming.de</code> ein und bestätige.</li>
+          </ol>
+          <p class="muted">Tipp: Klicke auf „Kopieren“ und füge die Adresse in Minecraft unter „Mehrspieler → Server hinzufügen“ ein.</p>
+        </div>
+      </details>
+    </div>
   </main>
 
-  <footer class="container" role="contentinfo">
-    <div class="footer-row">
-      <p>
-        <small>
-          <a class="bold" href="https://github.com/mastra-gaming" target="_blank" rel="noopener noreferrer" aria-label="Mastra-Gaming auf GitHub (öffnet in neuem Tab)">
-            &copy; <span id="year"></span> Mastra-Gaming
-          </a>. Alle Rechte vorbehalten.
-        </small>
-      </p>
-      <p>
-        <small class="muted">
-          Nicht offiziell mit Mojang verbunden oder von Mojang genehmigt.
-          <span lang="en">This site is not an official Minecraft product, nor is it approved by or associated with Mojang.</span>
-        </small>
-      </p>
-    </div>
+  <footer>
+    <span class="left">
+      <a href="https://github.com/mastra-gaming" target="_blank" rel="noopener noreferrer">
+        &copy; <span id="year"></span> Mastra-Gaming. Alle Rechte vorbehalten.
+      </a>
+    </span>
+    <span class="right">
+      Nicht offiziell mit Mojang verbunden oder von Mojang genehmigt.
+      <span lang="en">This site is not an official Minecraft product, nor is it approved by or associated with Mojang.</span>
+    </span>
   </footer>
 
+  <!-- Inline-JS: Jahr + IP kopieren (mit Fallback) -->
   <script>
     // Jahr automatisch aktualisieren
-    (function updateYear() {
+    (function () {
       var yearSpan = document.getElementById('year');
       if (yearSpan) yearSpan.textContent = new Date().getFullYear();
     })();
 
-    // IP in die Zwischenablage kopieren (mit Fallback)
-    (function enableCopy() {
-      var btn = document.getElementById('copy-ip');
-      var box = document.querySelector('.ip-box');
-      if (!btn || !box) return;
+    // IP in die Zwischenablage kopieren (Clipboard API + Fallback)
+    (function () {
+      var box = document.getElementById('server-ip');
+      if (!box) return;
+
       var ip = box.getAttribute('data-ip');
+      var btn = box.querySelector('.copy-btn');
 
       function setStatus(msg) {
-        // Aria-live auf der Box gibt Screenreadern Feedback
-        box.setAttribute('aria-label', msg);
+        // ARIA-Live auf der Box gibt Screenreadern Feedback
+        box.setAttribute('aria-label', msg || '');
       }
 
-      btn.addEventListener('click', function () {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(ip).then(function () {
-            setStatus('IP kopiert: ' + ip);
-            btn.textContent = 'Kopiert!';
-            setTimeout(function(){ btn.textContent = 'Kopieren'; setStatus(''); }, 1500);
-          }).catch(fallback);
-        } else {
-          fallback();
-        }
-      });
+      function resetBtnSoon() {
+        setTimeout(function () {
+          if (btn) btn.textContent = 'Kopieren';
+          setStatus('');
+        }, 1500);
+      }
 
-      function fallback() {
+      function fallbackCopy() {
         try {
           var temp = document.createElement('textarea');
           temp.value = ip;
@@ -154,13 +107,27 @@
           temp.select();
           document.execCommand('copy');
           document.body.removeChild(temp);
+          if (btn) btn.textContent = 'Kopiert!';
           setStatus('IP kopiert: ' + ip);
-          btn.textContent = 'Kopiert!';
-          setTimeout(function(){ btn.textContent = 'Kopieren'; setStatus(''); }, 1500);
+          resetBtnSoon();
         } catch (e) {
           setStatus('Konnte IP nicht kopieren. Markiere sie manuell.');
           alert('Konnte IP nicht automatisch kopieren. Bitte markiere und kopiere: ' + ip);
         }
+      }
+
+      if (btn) {
+        btn.addEventListener('click', function () {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(ip).then(function () {
+              btn.textContent = 'Kopiert!';
+              setStatus('IP kopiert: ' + ip);
+              resetBtnSoon();
+            }).catch(fallbackCopy);
+          } else {
+            fallbackCopy();
+          }
+        });
       }
     })();
   </script>
